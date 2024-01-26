@@ -23,7 +23,7 @@ function buildMetadata(sample) {
     const metadataPanel = d3.select("#sample-metadata");
 
     // Filter the metadata for the selected sample
-    d3.json("samples.json").then(data => {
+    d3.json(url).then(data => {
         const metadata = data.metadata.filter(obj => obj.id == sample)[0];
         metadataPanel.html("");  // Clear any existing metadata
 
@@ -39,7 +39,7 @@ function buildMetadata(sample) {
 // Function to build the bar and bubble charts
 function buildCharts(sample) {
     // Filter the samples for the selected sample
-    d3.json("samples.json").then(data => {
+    d3.json(url).then(data => {
         const samples = data.samples.filter(obj => obj.id == sample)[0];
 
         // Bar Chart
