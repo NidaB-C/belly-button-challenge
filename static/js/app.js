@@ -67,7 +67,6 @@ function buildCharts(sample) {
         margin: { t: 50, l: 50, r: 50, b: 50 },
         hovermode: 'closest',
         xaxis: { title: 'OTU ID' },
-        width: window.innerWidth * 0.4,
     };
 
     if (window.barChartExists) {
