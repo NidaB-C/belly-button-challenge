@@ -15,6 +15,8 @@ function init() {
         const firstSample = allData.names[0];
         buildCharts(firstSample);
         buildMetadata(firstSample);
+        const newWfreq = allData.metadata.find(d => d.id.toString() === firstSample).wfreq;
+        buildGaugeChart(newWfreq); 
     });
 }
 
@@ -85,8 +87,13 @@ function buildCharts(sample) {
 
 // Function to handle the change event when a new sample is selected
 function optionChanged(newSample) {
+    // Update the charts and metadata with the new sample
     buildCharts(newSample);
     buildMetadata(newSample);
+
+    // Find the new washing frequency from the metadata
+    const newWfreq = allData.metadata.find(d => d.id.toString() === newSample).wfreq;
+    buildGaugeChart(newWfreq); 
 }
 
 // Call the initialization function to load the dashboard
