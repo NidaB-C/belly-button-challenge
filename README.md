@@ -39,7 +39,6 @@ The data was sourced from the Belly Button Biodiversity study by [Rob Dunn Lab](
 2. Navigate to the project directory.
 3. Open the `index.html` file in a web browser to view the dashboard locally.
 4. Inspect the console for data structures as shown below:
-
-![Dashboard & Console Screenshot](screenshots/Dashboard and Console.png)
+!(screenshots/Dashboard and Console.png)
 
 
