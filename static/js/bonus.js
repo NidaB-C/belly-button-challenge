@@ -35,4 +35,4 @@ function buildGaugeChart(wfreq) {
       };
   
       Plotly.newPlot('gauge', data, layout);
-    };
+    }
