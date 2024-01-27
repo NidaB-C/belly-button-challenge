@@ -91,6 +91,7 @@ function buildCharts(sample) {
 
 // Function to handle the change event when a new sample is selected
 function optionChanged(newSample) {
+    console.log(newSample);
     // Update the charts and metadata with the new sample
     buildCharts(newSample);
     buildMetadata(newSample);

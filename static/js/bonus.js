@@ -42,8 +42,8 @@ function buildGaugeChart(sample) {
   }
   
   // Function to update the gauge chart when a new sample is selected
-  function optionChanged(newSample) {
-    buildGaugeChart(newSample);
+  function optionChanged(newSamples) {
+    buildGaugeChart(newSamples);
   }
   
   // Initialize the dashboard with the first sample's washing frequency
@@ -56,10 +56,4 @@ function buildGaugeChart(sample) {
   
   // Call the initialization function to load the dashboard
   init();
-  
-  // Event listener for the dropdown menu selection
-  d3.selectAll("#selDataset").on("change", function() {
-    const newSample = d3.select(this).property("value");
-    optionChanged(newSample);
-  });
   
