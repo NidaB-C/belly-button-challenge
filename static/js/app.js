@@ -47,7 +47,6 @@ function buildCharts(sample) {
     const barLayout = {
         title: 'Top 10 OTUs Found in the Individual',
         margin: { t: 30, l: 150 },
-        width: window.innerWidth * 0.4
     };
 
     // Bubble Chart
@@ -68,7 +67,7 @@ function buildCharts(sample) {
         margin: { t: 50, l: 50, r: 50, b: 50 },
         hovermode: 'closest',
         xaxis: { title: 'OTU ID' },
-        width: window.innerWidth * 0.5,
+        width: window.innerWidth * 0.4,
     };
 
     if (window.barChartExists) {
