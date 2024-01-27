@@ -48,12 +48,15 @@ function buildCharts(sample) {
             y: samples.otu_ids.slice(0, 10).map(id => `OTU ${id}`).reverse(),
             text: samples.otu_labels.slice(0, 10).reverse(),
             type: 'bar',
-            orientation: 'h'
+            orientation: 'h',
+            marker: {
+                color: 'saddlebrown'
+            }
         }];
-
+        
         const barLayout = {
             title: 'Top 10 OTUs Found in the Individual',
-            margin: { t: 30, l: 150 }
+            margin: { t: 30, l: 150 },
         };
 
         Plotly.newPlot('bar', barData, barLayout);
@@ -74,10 +77,12 @@ function buildCharts(sample) {
 
         const bubbleLayout = {
             title: 'Bacteria Cultures Per Sample',
-            margin: { t: 0 },
+            margin: { t: 50, l: 50, r: 50, b: 50 }, // Reduced margin to allow more space for the chart
             hovermode: 'closest',
-            xaxis: { title: 'OTU ID' }
+            xaxis: { title: 'OTU ID' },
+            width: window.innerWidth * 0.7, 
         };
+        
 
         Plotly.newPlot('bubble', bubbleData, bubbleLayout);
         console.log("Bubble chart data", bubbleData); // Console log to check the bubble chart data
